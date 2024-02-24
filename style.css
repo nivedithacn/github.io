@@ -1,0 +1,249 @@
+/* Reset some basic elements */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: white; /* Ensure text is visible against black background */
+    background: black; /* Change background color to black */
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+
+.site-header {
+    position: relative;
+    width: 100%; /* Keep full width */
+    height: 50vh; /* Set height to half of the viewport height */
+    background: url('bloglogo.jpeg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the full width */
+    color: white;
+    padding-top: 10vh; /* Adjust if necessary to position your title */
+    text-align: center;
+}
+
+.site-nav ul {
+    list-style: none; /* Remove bullet points from nav items */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for nav */
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+}
+
+.site-nav ul li {
+    display: inline; /* Align nav items in a row */
+    margin: 0 10px;
+}
+
+.site-nav ul li a {
+    color: white; /* Ensure nav links are visible against the background */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-nav ul li a.active, .site-nav ul li a:hover {
+    color: #ffb703; /* Highlight color for active/hover state */
+}
+/* Hero Section */
+.hero {
+    background: #e9d8a6;
+    color: #333;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+.about-me {
+    text-align: center; /* Center-aligns the content */
+    padding: 40px 0; /* Adds padding above and below the section */
+color: white;
+    background: black; /* Optional: Adds a different background to distinguish the section */
+}
+
+.about-me .container {
+    max-width: 800px; /* Restricts the max width of the content for readability */
+    margin: auto; /* Centers the container */
+}
+
+.about-img {
+    width: 500px; /* Sets the image size */
+    height: 500px; /* Sets the image size */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+.about-me p {
+    text-indent: 2em; /* Indents the first line of paragraphs */
+    color: white; /* Ensures the text color is white */
+}
+
+.dream-place-video {
+    text-align: center; /* Center-aligns the content */
+    padding: 40px 0; /* Adds padding above and below the section */
+    background: black; /* Optional: Adds a background color to distinguish the section */
+}
+
+.dream-place-video h2 {
+    margin-bottom: 20px; /* Adds space between the title and the video */
+    color: white; /* Color of the title text */
+    font-size: 1.5em
+    margin-bottom: 20px; /* Adds some space between the title and the video */
+    color: white; /* Sets the color of the title */
+}
+
+.dream-place-video video {
+    width: 80%; /* Sets the width of the video */
+    max-width: 750px; /* Ensures the video is not too large */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to your video */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+.videos-section {
+    padding: 20px 0;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+    gap: 10px; /* Spacing between video items */
+}
+
+.video-item video {
+    width: 100%; /* Makes the video fill its container */
+    max-width: 400px; /* Maximum size for the video */
+    height: 300px; /* Maintain aspect ratio */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .videos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Bucketlist Title Styles */
+.bucketlist-title h2 {
+    text-align: center;
+    margin: 20px 0; /* Adjust spacing around the title as needed */
+    font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+/* Ensure the gallery images are displayed horizontally */
+.gallery .grid {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Adjust the space between images as needed */
+}
+
+/* Ensure images within the gallery do not stretch too much and are of equal height */
+.gallery .photo img {
+    width: auto; /* Adjust based on your preference */
+    height: 400px; /* Adjust based on your preference */
+    object-fit: cover; /* This will ensure the images cover the area nicely without distortion */
+}
+
+
+
+
+.btn {
+    display: inline-block;
+    background: #ffb703;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #f77f00;
+}
+
+/* Photo Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+.photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Container for each photo block */
+.photo-block {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    margin-bottom: 20px; /* Add some space between photo blocks */
+}
+
+/* Styles for the photo */
+.photo-block img {
+    width: 700px; /* Fixed width for all images */
+    height: 500px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 5px; /* Optional: Adds rounded corners to your images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+    margin-bottom: 10px; /* Adds space between the photo and its info */
+}
+
+
+/* Styles for the photo information */
+.photo-info {
+    text-align: center; /* Center-align the text */
+    margin-top: 10px; /* Add some space between the photo and its details */
+}
+
+/* You might already have styles for p elements, but you can add or adjust as needed */
+.photo-info p {
+    /* Add styles specific to the photo details here if needed */
+}
+
+
+
+
+/* Footer */
+.site-footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
